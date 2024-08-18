@@ -48,7 +48,7 @@ def get_fox_image_url():
     return data['image']
 
 def get_pokemon_data(pokemon_name):    
-    url = f'https://pokeapi.co/api/v2/pokemon/'
+    url = f'https://pokeapi.co/api/v2/pokemon/{pokemon_name.lower()}'
     res = requests.get(url)
     data = res.json()
     return data['sprites']['front_default']
